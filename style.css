@@ -1,0 +1,23 @@
+BODY { 
+  margin: 1em;
+  font-family: Arial;
+  line-height: 1.1;
+  background: #3f3f3f;
+  color: #999999; 
+  font-size: 80%;
+}
+
+A:link { color: #cccccc;}          /* unvisited link */
+A:visited { color: #cccccc;}        /* visited links */
+A:active { color: #555555; background: #999999;}        /* active links */
+A:hover { color: #cccccc; background: #555555;}
+
+TD { 
+	color: #999999;
+	background: #555555;
+	font-size: 80%;
+}
+
+#inputbutton  	{ background: #999999; font-family: Arial; border-color= #cccccc;}
+#inputtext	{ background: #999999; }
+#inputradio	{ background: #999999; }
