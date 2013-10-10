@@ -1,4 +1,4 @@
-<? require("config.php"); ?>
+<?php require("config.php"); ?>
 <html>
 <head>
   <title>RooFToP - PHP Remote FTP Client</title>

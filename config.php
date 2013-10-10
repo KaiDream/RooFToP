@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  * RuFToP - Remote FTP Client
  * Copyright (C) 2001 Ray Lopez (http://www.TheDreaming.com)

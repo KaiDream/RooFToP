@@ -1,4 +1,4 @@
-<? 
+<?php
 /*
  * RuFToP - Remote FTP Client
  * Copyright (C) 2001 Ray Lopez (http://www.TheDreaming.com)
@@ -23,7 +23,7 @@ require("config.php");
 <html>
         <head>
                 <title>RuFToP - PHP FTP Client (Copyright)</title>
-                <LINK REL=stylesheet HREF="<? print($scriptCSS); ?>" TYPE="text/css">
+                <LINK REL=stylesheet HREF="<?php print($scriptCSS); ?>" TYPE="text/css">
         </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bottommargin="0" >
 <table width=100%><tr>

@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  * RuFToP - Remote FTP Client
  * Copyright (C) 2001 Ray Lopez (http://www.TheDreaming.com)
@@ -51,11 +51,11 @@ if($action == "download") {
 ?>
 <html>
 	<head>
-	<LINK REL=stylesheet HREF="<? print($scriptCSS); ?>" TYPE="text/css">
+	<LINK REL=stylesheet HREF="<?php print($scriptCSS); ?>" TYPE="text/css">
 	</head>
 <body>
 <form action=local.php?formsub=1 method="post" target="local" name="local">
-<?
+<?php
 print("<center><table width=100%><tr><td><center>");
 /*
 	Upload fle to Remote 
@@ -142,14 +142,14 @@ print("</center></td></tr></table></center>");
 
 
 ?>
-<? if(!$scriptLocalDrive) { ?>
+<?php if(!$scriptLocalDrive) { ?>
 <table width=100%>
 <tr>
-<td><font size=-1>Local Directory:</font><input type=text name=dir value="<? print($dir); ?>"></td>
+<td><font size=-1>Local Directory:</font><input type=text name=dir value="<?php print($dir); ?>"></td>
 <td><input type=submit name="Change" value="Change" id="inputbutton"></td>
 </tr>
 </table>
-<? 	
+<?php
 }
 	diskStats($scriptStats);
 	print(dirHeader());
@@ -170,7 +170,7 @@ print("</center></td></tr></table></center>");
 <input type="hidden" name="connDir" value="">
 <input type="hidden" name="connMake" value="">
 <input type="hidden" name="action" value="">
-<input type="hidden" name="localDir" value="<? print(getcwd()); ?>">
+<input type="hidden" name="localDir" value="<?php print(getcwd()); ?>">
 </form>
 </body>
-<? } ?>
+<?php } ?>

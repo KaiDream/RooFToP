@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  * RuFToP - Remote FTP Client
  * Copyright (C) 2001 Ray Lopez (http://www.TheDreaming.com)
@@ -66,11 +66,11 @@ if($action == "download") {
 <html>
         <head>
                 <title>RuFToP - PHP FTP Client (Remote)</title>
-                <LINK REL=stylesheet HREF="<? print($scriptCSS); ?>" TYPE="text/css">
+                <LINK REL=stylesheet HREF="<?php print($scriptCSS); ?>" TYPE="text/css">
         </head>
 <body>
 <form action=remote.php method="post" name="remote">
-<?
+<?php
 
 if($connMake) {
 	if($fp > 0) {
@@ -156,38 +156,38 @@ if($connMake) {
 
 ?>
 <table width=100%><tr><td>
-<font size=-1>Remote Directory:</font><input type=text name=dir value="<? print($dir); ?>"> 
+<font size=-1>Remote Directory:</font><input type=text name=dir value="<?php print($dir); ?>">
 </td><td>
 <input type=submit name="Change" value="Change" id="inputbutton">
 </td></tr></table>
-<?
+<?php
 	        print(dirHeader());
         	print(dirTable());
         	print(dirGatherRemote($dir));
         	print(dirTable());
         	print(dirFooter());
 ?>
-<input type="hidden" name="connUser" value="<? print($connUser); ?>">
-<input type="hidden" name="connPass" value="<? print($connPass); ?>">
-<input type="hidden" name="connServer" value="<? print($connServer); ?>">
-<input type="hidden" name="connPort" value="<? print($connPort); ?>">
-<input type="hidden" name="connAnon" value="<? print($connAnon); ?>">
-<input type="hidden" name="connPasv" value="<? print($connPasv); ?>">
-<input type="hidden" name="connMake" value="<? print($connMake); ?>">
-<input type="hidden" name="connDir" value="<? print(ftp_pwd($fp)); ?>">
+<input type="hidden" name="connUser" value="<?php print($connUser); ?>">
+<input type="hidden" name="connPass" value="<?php print($connPass); ?>">
+<input type="hidden" name="connServer" value="<?php print($connServer); ?>">
+<input type="hidden" name="connPort" value="<?php print($connPort); ?>">
+<input type="hidden" name="connAnon" value="<?php print($connAnon); ?>">
+<input type="hidden" name="connPasv" value="<?php print($connPasv); ?>">
+<input type="hidden" name="connMake" value="<?php print($connMake); ?>">
+<input type="hidden" name="connDir" value="<?php print(ftp_pwd($fp)); ?>">
 <input type="hidden" name="clientFile" value=""> 
 <input type="hidden" name="localDir" value="">
 <input type="hidden" name="action" value="">
 <input type="hidden" name="downFile" value="0">
 <input type="hidden" name="connected" value="1"> 
-<?
+<?php
 	@ftp_quit($fp);
 	}
-} else {?>
+} else { ?>
 Please establish FTP connetion.. 
 <input type="hidden" name="connected" value="0">
-<? } ?>
+<?php } ?>
 </form>
 </body>
 </html>
-<? } ?>
+<?php } ?>
